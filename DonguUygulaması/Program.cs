@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace DonguUygulaması
 {
@@ -29,11 +30,25 @@ namespace DonguUygulaması
                     toplamyaz();
                     break;
                 case 5:
-                 break;
+                    enumarator();
+                    toplamyaz();
+
+                    break;
                 default:
                     break;
             }
         }
+
+        private static void enumarator()
+        {
+            IEnumerator ienum = sayilar.GetEnumerator();
+            while (ienum.MoveNext())
+            {
+                toplam += sayilar[i];
+                i++;
+            }
+        }
+
         private static void dowhiledongusu()
         {
             do
